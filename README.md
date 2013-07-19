@@ -118,6 +118,7 @@ drwxrwxr-x 1 vagrant www-data 102 Jul 19 11:09 data
 
 Next you should generate your <code>app</code> direcotry with bake command. this also configure CAKE_CORE_INCLUDE_PATH automatically.
 
+
 <pre>
 vagrant@precise64:/vagrant_data$ ./Vendor/pear-pear.cakephp.org/CakePHP/bin/cake bake --app app
  
@@ -163,3 +164,8 @@ Name:
 </pre>
 
 Then open <code>http://127.0.0.1:8080</code> on your browser. You must see the initial screen of CakePHP. Yes, now You've installed CakePHP via Composer.
+
+##### note
+<p>
+specifying --app option to non existing directory cause warnings. run bake without --app shows clean result. but you need to give fullpath to the first question of bake processs.
+</p>
